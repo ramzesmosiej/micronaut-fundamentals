@@ -13,6 +13,7 @@ In Micronaut there is no need to add @PathVariable annotation and the default re
 ```
 @Get("/hello/{name}", produces = [MediaType.TEXT_PLAIN])
 ```
-http://localhost:8080/hello/Ramzes will produce Hello Ramzes response
+http://localhost:8080/hello/Ramzes will produce Hello Ramzes response.
+
 Official docs on how to create controller and run the app:
 https://docs.micronaut.io/latest/guide/#creatingServer
