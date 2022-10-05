@@ -8,6 +8,7 @@ class HelloController {
     }
 }
 ```
+By default the Micronaut HTTP server is configured to run on port 8080.
 In Micronaut there is no need to add @PathVariable annotation and the default reponse data format is JSON. Parameter produces can be used to change return data format.
 ```
 @Get("/hello/{name}", produces = [MediaType.TEXT_PLAIN])
