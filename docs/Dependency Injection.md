@@ -52,3 +52,15 @@ class Vehicle @Inject constructor(@param:Named("V8") private val engine: Engine)
 }
 ```
 We can also use quelifying by annotation or by generic type arguments. More here: https://docs.micronaut.io/latest/guide/#qualifiers
+### Bean Factories
+There is a possibility to make classes from third-party libary available as beans. This can be done by using @Factory:
+```
+@Factory
+class EngineFactory {
+
+    @Singleton
+    fun microwave() : Microwave {
+        return Microwave();
+    }
+}
+```
