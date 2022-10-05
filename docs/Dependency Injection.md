@@ -1,4 +1,5 @@
 # This chapter will focus on dependency injection mechanism in micronaut and its slight differences when comparing to Spring
+### Defining beans
 
 Unlike other frameworks which rely on runtime reflection and proxies, Micronaut uses compile time data to implement dependency injection.
 The object called beans are managed by IoC Container. In order to start the application context and get the bean we use:
@@ -35,6 +36,19 @@ fun main(args: Array<String>) {
 	val context = BeanContext.run();
 	val vehicle = context.getBean(Vehicle::class.java)
 	println(vehicle.start());
+}
+
+```
+The BeanContext is a container object for all your bean definitions (it also implements BeanDefinitionRegistry).
+### Bean qualifiers
+If the given interface has multiple implementations, we need to use quelifier when injecting.
+The simplest way to do this is by adding named parameter when injecting the constructor:
+```
+@Singleton
+class Vehicle @Inject constructor(@param:Named("V8") private val engine: Engine) {
+    fun start(): String {
+        return engine.start()
+    }
 }
 
 ```
