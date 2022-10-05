@@ -9,3 +9,5 @@ git remote add origin https://github.com/ramzesmosiej/micronaut-fundamentals.git
 git push -u origin main
 
 ```
+Official docs how to create app using Micronaut Launch or CLI:
+https://docs.micronaut.io/latest/guide/#buildCLI
