@@ -50,5 +50,5 @@ class Vehicle @Inject constructor(@param:Named("V8") private val engine: Engine)
         return engine.start()
     }
 }
-
 ```
+We can also use quelifying by annotation or by generic type arguments. More here: https://docs.micronaut.io/latest/guide/#qualifiers
